@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "Cambridge Dictionary",
+    "description": "Searches highlighted text on Cambridge Dictionary",
+    "version": "1.0",
+    "icons": {
+        "48": "icons/dictionary.png",
+        "96": "icons/dictionary.png"
+    },
+    "permissions": ["contextMenus"],
+    "background": {
+        "scripts":["background.js"]
+    }
+}
