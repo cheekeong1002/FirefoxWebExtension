@@ -9,6 +9,9 @@ browser.contextMenus.create({
 browser.contextMenus.onClicked.addListener(contextMenuAction);
 
 function contextMenuAction(info, tab) {
-    const url = "https://dictionary.cambridge.org/dictionary/english/"+info.selectionText;
-    browser.tabs.create({url: url});
+    let term = info.selectionText;
+    browser.sidebarAction.setPanel({
+        panel: `/index.html#${term}`
+    });
+    browser.sidebarAction.open();
 }
